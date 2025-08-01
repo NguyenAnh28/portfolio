@@ -12,6 +12,26 @@ import {
   Code,
   Palette,
   Zap,
+  FileCode,
+  Database,
+  Globe,
+  Box,
+  Play,
+  Settings,
+  Monitor,
+  Terminal,
+  BookOpen,
+  UploadCloud,
+  MinusCircle,
+  Moon,
+  Hammer,
+  Sparkles,
+  Repeat,
+  Beaker,
+  Dot,
+  Coffee,
+  Twitter,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -205,7 +225,7 @@ export default function PersonalWebsite() {
             className="w-full h-full object-cover object-bottom"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.5 }}
+            transition={{ duration: 1.5 }}
           >
             <source src="/background.mp4" type="video/mp4" />
           </motion.video>
@@ -272,7 +292,7 @@ export default function PersonalWebsite() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6">
+      <section id="projects" className="py-20 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -375,8 +395,133 @@ export default function PersonalWebsite() {
         </div>
       </section>
 
+      {/* Carousel Section */}
+      <section className="pt-8 pb-20 px-6 bg-black overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          {/* Top Carousel - Right to Left */}
+          <div className="relative mb-8">
+            <div className="flex overflow-hidden">
+              <div className="flex animate-scroll-left">
+                {[
+                  { name: "TypeScript", icon: FileCode },
+                  { name: "FastAPI", icon: Play },
+                  { name: "Spring Boot", icon: Settings },
+                  { name: "Python", icon: Code },
+                  { name: "PostgreSQL", icon: Database },
+                  { name: "Tailwind CSS", icon: Palette },
+                  { name: "Framer Motion", icon: Zap },
+                  { name: "Docker", icon: Box },
+                  { name: "Vercel", icon: Globe },
+                  { name: "Postman", icon: Monitor },
+                  { name: "DBeaver", icon: Database },
+                  { name: "Java", icon: FileCode },
+                  { name: "Cursor", icon: Terminal },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                  >
+                    <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
+                    {item.name}
+                  </div>
+                ))}
+                {/* Duplicate items for seamless loop */}
+                {[
+                  { name: "TypeScript", icon: FileCode },
+                  { name: "FastAPI", icon: Play },
+                  { name: "Spring Boot", icon: Settings },
+                  { name: "Python", icon: Code },
+                  { name: "PostgreSQL", icon: Database },
+                  { name: "Tailwind CSS", icon: Palette },
+                  { name: "Framer Motion", icon: Zap },
+                  { name: "Docker", icon: Box },
+                  { name: "Vercel", icon: Globe },
+                  { name: "Postman", icon: Monitor },
+                  { name: "DBeaver", icon: Database },
+                  { name: "Java", icon: FileCode },
+                  { name: "Cursor", icon: Terminal },
+                ].map((item, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                  >
+                    <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
+                    {item.name}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Blur overlay on left end */}
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-950 to-transparent pointer-events-none"></div>
+            {/* Blur overlay on right end */}
+            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-950 to-transparent pointer-events-none"></div>
+          </div>
+
+          {/* Bottom Carousel - Left to Right */}
+          <div className="relative">
+            <div className="flex overflow-hidden">
+              <div className="flex animate-scroll-right">
+                {[
+                  { name: "Design with intent", icon: Palette },
+                  { name: "Readable > clever", icon: BookOpen },
+                  { name: "Push to deploy", icon: UploadCloud },
+                  { name: "Less but better", icon: MinusCircle },
+                  { name: "Dark mode always", icon: Moon },
+                  { name: "Code is craft", icon: Hammer },
+                  { name: "Minimal, not boring", icon: Sparkles },
+                  { name: "Move fast", icon: Zap },
+                  { name: "Refactor later", icon: Repeat },
+                  { name: "Prototype everything", icon: Beaker },
+                  { name: "Pixels matter", icon: Dot },
+                  { name: "No dead ends", icon: ArrowRight },
+                  { name: "Professional matcha drinker", icon: Coffee },
+                  { name: "Not a frontend dev", icon: Terminal },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                  >
+                    <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
+                    {item.name}
+                  </div>
+                ))}
+                {/* Duplicate items for seamless loop */}
+                {[
+                  { name: "Design with intent", icon: Palette },
+                  { name: "Readable > clever", icon: BookOpen },
+                  { name: "Push to deploy", icon: UploadCloud },
+                  { name: "Less but better", icon: MinusCircle },
+                  { name: "Dark mode always", icon: Moon },
+                  { name: "Code is craft", icon: Hammer },
+                  { name: "Minimal, not boring", icon: Sparkles },
+                  { name: "Move fast", icon: Zap },
+                  { name: "Refactor later", icon: Repeat },
+                  { name: "Prototype everything", icon: Beaker },
+                  { name: "Pixels matter", icon: Dot },
+                  { name: "No dead ends", icon: ArrowRight },
+                  { name: "Professional matcha drinker", icon: Coffee },
+                  { name: "Not a frontend dev", icon: Terminal },
+                ].map((item, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                  >
+                    <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
+                    {item.name}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Blur overlay on left end */}
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-950 to-transparent pointer-events-none"></div>
+            {/* Blur overlay on right end */}
+            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-950 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-gray-950">
+      <section id="about" className="py-20 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -458,57 +603,109 @@ export default function PersonalWebsite() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section
+        id="contact"
+        className="py-20 px-6 bg-black relative overflow-hidden"
+      >
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <motion.video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <source src="/background.mp4" type="video/mp4" />
+          </motion.video>
+          {/* Overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+          {/* Smooth black blur blend at bottom */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+          {/* Smooth black blur blend at top */}
+          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/60 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <motion.div
+              className="flex justify-center mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                <div className="w-2 h-2 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)] animate-[brightPulse_2s_ease-in-out_infinite]"></div>
+                <span className="text-white font-medium text-sm">
+                  Available for work
+                </span>
+              </div>
+            </motion.div>
+            <h2 className="text-4xl lg:text-5xl font-medium text-white mb-6">
               Let's Build Something Amazing
             </h2>
-            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              Ready to bring your next project to life? I'm always excited to
-              work on innovative projects with forward-thinking teams.
+            <p className="text-xl text-silver-300 mb-8 max-w-2xl mx-auto">
+              I'm always ready to work with forward-thinking teams.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-200"
+                className="bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)] text-white hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-shadow duration-300 hover:bg-transparent"
+                asChild
               >
-                <Mail className="mr-2 h-4 w-4" />
-                Get In Touch
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-gray-700 text-gray-300 hover:bg-gray-900 bg-transparent"
-              >
-                <Github className="mr-2 h-4 w-4" />
-                View GitHub
+                <a href="mailto:anhtrinh.swe@gmail.com">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Get In Touch
+                </a>
               </Button>
             </div>
 
-            <div className="flex justify-center space-x-6">
-              {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Mail, href: "#", label: "Email" },
-              ].map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  className="p-3 rounded-full bg-gray-900 border border-gray-800 text-gray-400 hover:text-white hover:border-gray-700 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <social.icon className="h-5 w-5" />
-                  <span className="sr-only">{social.label}</span>
-                </motion.a>
-              ))}
+            <div className="flex justify-center items-center space-x-4">
+              <motion.a
+                href="https://github.com/NguyenAnh28"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] transition-all duration-300"
+              >
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </motion.a>
+              <span className="text-zinc-600 text-3xl font-light">|</span>
+              <motion.a
+                href="https://www.linkedin.com/in/nguyenanhtrinh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] transition-all duration-300"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </motion.a>
+              <span className="text-zinc-600 text-3xl font-light">|</span>
+              <motion.a
+                href="https://x.com/MasterShifu457"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] transition-all duration-300"
+              >
+                <Image
+                  src="/x.svg"
+                  alt="X"
+                  width={20}
+                  height={20}
+                  className="h-5 w-5"
+                />
+                <span className="sr-only">X</span>
+              </motion.a>
             </div>
           </motion.div>
         </div>
@@ -517,12 +714,8 @@ export default function PersonalWebsite() {
       {/* Footer */}
       <footer className="border-t border-gray-800 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Alex Chen. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-sm">
-            Built with Next.js, Tailwind CSS, and Framer Motion
-          </p>
+          <p className="text-white text-sm">Built in Austin, TX</p>
+          <p className="text-white text-sm">All rights reserved, © 2025</p>
         </div>
       </footer>
     </div>
