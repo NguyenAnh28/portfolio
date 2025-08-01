@@ -132,9 +132,18 @@ export function SubheaderWordsPullUp({
 
 export default function PersonalWebsite() {
   const [scrollY, setScrollY] = useState(0);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+
+      // Hide navbar when scrolling past hero section (approximately 120vh)
+      const heroHeight = window.innerHeight * 1.2; // 120vh
+      setIsNavbarVisible(currentScrollY < heroHeight);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -146,31 +155,33 @@ export default function PersonalWebsite() {
     <div className="min-h-screen bg-black text-gray-200">
       {/* Navigation */}
       <nav
-        className="fixed top-0 w-full z-50 transition-all duration-300"
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
         style={{
           backgroundColor: `rgba(0, 0, 0, ${navbarOpacity})`,
           backdropFilter: `blur(${navbarBlur}px)`,
         }}
       >
-        <div className="max-w-6xl mx-auto px-6 py-6 flex justify-end items-center">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex justify-end items-center">
           <div className="flex items-center space-x-6">
             <Link
               href="#projects"
-              className="text-gray-400 hover:text-white transition-colors hover:text-shadow-[0_0_35px_rgba(255,255,255,0.9)] transition-all duration-300 font-medium"
+              className="text-white transition-colors hover:underline hover:underline-offset-4 transition-all duration-300 font-medium text-sm"
             >
-              Projects
+              PROJECTS
             </Link>
             <Link
               href="#about"
-              className="text-gray-400 hover:text-white transition-colors hover:text-shadow-[0_0_35px_rgba(255,255,255,0.9)] transition-all duration-300 font-medium"
+              className="text-white transition-colors hover:underline hover:underline-offset-4 transition-all duration-300 font-medium text-sm"
             >
-              About
+              ABOUT
             </Link>
             <Link
               href="#contact"
-              className="text-gray-400 hover:text-white transition-colors hover:text-shadow-[0_0_35px_rgba(255,255,255,0.9)] transition-all duration-300 font-medium"
+              className="text-white transition-colors hover:underline hover:underline-offset-4 transition-all duration-300 font-medium text-sm"
             >
-              Contact
+              CONTACT
             </Link>
           </div>
         </div>
@@ -194,7 +205,7 @@ export default function PersonalWebsite() {
             className="w-full h-full object-cover object-bottom"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
           >
             <source src="/background.mp4" type="video/mp4" />
           </motion.video>
