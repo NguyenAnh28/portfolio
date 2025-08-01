@@ -303,21 +303,21 @@ export default function PersonalWebsite() {
                 description:
                   "A comprehensive analytics dashboard built with Next.js, featuring real-time data visualization and user management.",
                 tech: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
-                image: "/placeholder.svg?height=200&width=400",
+                image: "/placeholder.svg",
               },
               {
                 title: "E-commerce Platform",
                 description:
                   "Full-stack e-commerce solution with payment integration, inventory management, and admin panel.",
                 tech: ["React", "Node.js", "MongoDB", "Stripe"],
-                image: "/placeholder.svg?height=200&width=400",
+                image: "/placeholder.svg",
               },
               {
                 title: "AI Chat Application",
                 description:
                   "Real-time chat application powered by AI, featuring smart responses and conversation management.",
                 tech: ["React", "Socket.io", "OpenAI", "Redis"],
-                image: "/placeholder.svg?height=200&width=400",
+                image: "/placeholder.svg",
               },
             ].map((project, index) => (
               <motion.div key={index} variants={fadeInUp}>
