@@ -189,7 +189,7 @@ export default function PersonalWebsite() {
       >
         <div className="max-w-7xl mx-auto px-2 py-5 flex justify-between items-center">
           <div className="text-gray-200 font-medium text-lg">RYANTRINH</div>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-8 ml-6">
             <Link
               href="#projects"
               className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
