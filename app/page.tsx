@@ -157,16 +157,22 @@ export default function PersonalWebsite() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
 
-      // Hide navbar when scrolling past hero section (approximately 120vh)
-      const heroHeight = window.innerHeight * 1.2; // 120vh
-      setIsNavbarVisible(currentScrollY < heroHeight);
+      // Show navbar when scrolling up, hide when scrolling down
+      if (currentScrollY > scrollY) {
+        // Scrolling down
+        setIsNavbarVisible(false);
+      } else {
+        // Scrolling up
+        setIsNavbarVisible(true);
+      }
+
+      setScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [scrollY]);
 
   const navbarOpacity = 0;
   const navbarBlur = 0;
@@ -175,35 +181,43 @@ export default function PersonalWebsite() {
     <div className="min-h-screen bg-black text-gray-200">
       {/* Navigation */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-black/20 ${
+          isNavbarVisible
+            ? "translate-y-0"
+            : "-translate-y-full pointer-events-none"
         }`}
-        style={{
-          backgroundColor: `rgba(0, 0, 0, ${navbarOpacity})`,
-          backdropFilter: `blur(${navbarBlur}px)`,
-        }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-6 flex justify-end items-center">
-          <div className="flex items-center space-x-6">
+        <div className="max-w-7xl mx-auto px-2 py-5 flex justify-between items-center">
+          <div className="text-gray-200 font-medium text-lg">RYANTRINH</div>
+          <div className="flex items-center space-x-8">
             <Link
               href="#projects"
-              className="text-white transition-colors hover:underline hover:underline-offset-4 transition-all duration-300 font-medium text-sm"
+              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             >
-              PROJECTS
+              Works
             </Link>
             <Link
               href="#about"
-              className="text-white transition-colors hover:underline hover:underline-offset-4 transition-all duration-300 font-medium text-sm"
+              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             >
-              ABOUT
+              About
             </Link>
             <Link
               href="#contact"
-              className="text-white transition-colors hover:underline hover:underline-offset-4 transition-all duration-300 font-medium text-sm"
+              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             >
-              CONTACT
+              Contact
             </Link>
           </div>
+          <Link
+            href="#"
+            className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group flex items-center space-x-1"
+          >
+            <span className="transition-transform duration-300 group-hover:-translate-x-0.5">
+              View Template
+            </span>
+            <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </nav>
 
@@ -712,7 +726,7 @@ export default function PersonalWebsite() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-800 py-8 px-6">
+      <footer className="py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
           <p className="text-white text-sm">Built in Austin, TX</p>
           <p className="text-white text-sm">All rights reserved, © 2025</p>
