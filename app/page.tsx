@@ -210,13 +210,15 @@ export default function PersonalWebsite() {
             </Link>
           </div>
           <Link
-            href="#"
+            href="https://github.com/NguyenAnh28/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group flex items-center space-x-1"
           >
             <span className="transition-transform duration-300 group-hover:-translate-x-0.5">
-              View Template
+              Get Template
             </span>
-            <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+            <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
           </Link>
         </div>
       </nav>
