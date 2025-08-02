@@ -40,6 +40,53 @@ import { useEffect, useState } from "react";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
+// TechIcon component to handle SVG icons
+const TechIcon = ({ name }: { name: string }) => {
+  const iconMap: { [key: string]: string } = {
+    TypeScript: "/typescript.svg",
+    FastAPI: "/fastapi.svg",
+    "Spring Boot": "/springboot.svg",
+    Python: "/python.svg",
+    PostgreSQL: "/postgresql.svg",
+    "Tailwind CSS": "/tailwindcss.svg",
+    "Framer Motion": "/framer.svg",
+    Docker: "/docker.svg",
+    Vercel: "/vercel.svg",
+    Postman: "/postman.svg",
+    DBeaver: "/dbeaver.svg",
+    Java: "/java.svg",
+    Cursor: "/cursor.jpeg",
+  };
+
+  const iconPath = iconMap[name];
+
+  if (!iconPath) {
+    // Fallback to Lucide icons for items without SVG
+    const fallbackIcons: { [key: string]: any } = {
+      TypeScript: FileCode,
+      FastAPI: Play,
+      "Spring Boot": Settings,
+      Python: Code,
+      PostgreSQL: Database,
+      "Tailwind CSS": Palette,
+      "Framer Motion": Zap,
+      Docker: Box,
+      Vercel: Globe,
+      Postman: Monitor,
+      DBeaver: Database,
+      Java: FileCode,
+      Cursor: Terminal,
+    };
+
+    const FallbackIcon = fallbackIcons[name];
+    return FallbackIcon ? (
+      <FallbackIcon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
+    ) : null;
+  }
+
+  return <Image src={iconPath} alt={name} width={16} height={16} />;
+};
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -419,50 +466,50 @@ export default function PersonalWebsite() {
             <div className="flex overflow-hidden">
               <div className="flex animate-scroll-left">
                 {[
-                  { name: "TypeScript", icon: FileCode },
-                  { name: "FastAPI", icon: Play },
-                  { name: "Spring Boot", icon: Settings },
-                  { name: "Python", icon: Code },
-                  { name: "PostgreSQL", icon: Database },
-                  { name: "Tailwind CSS", icon: Palette },
-                  { name: "Framer Motion", icon: Zap },
-                  { name: "Docker", icon: Box },
-                  { name: "Vercel", icon: Globe },
-                  { name: "Postman", icon: Monitor },
-                  { name: "DBeaver", icon: Database },
-                  { name: "Java", icon: FileCode },
-                  { name: "Cursor", icon: Terminal },
-                ].map((item, index) => (
+                  "TypeScript",
+                  "FastAPI",
+                  "Spring Boot",
+                  "Python",
+                  "PostgreSQL",
+                  "Tailwind CSS",
+                  "Framer Motion",
+                  "Docker",
+                  "Vercel",
+                  "Postman",
+                  "DBeaver",
+                  "Java",
+                  "Cursor",
+                ].map((name, index) => (
                   <div
                     key={index}
                     className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
                   >
-                    <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
-                    {item.name}
+                    <TechIcon name={name} />
+                    {name}
                   </div>
                 ))}
                 {/* Duplicate items for seamless loop */}
                 {[
-                  { name: "TypeScript", icon: FileCode },
-                  { name: "FastAPI", icon: Play },
-                  { name: "Spring Boot", icon: Settings },
-                  { name: "Python", icon: Code },
-                  { name: "PostgreSQL", icon: Database },
-                  { name: "Tailwind CSS", icon: Palette },
-                  { name: "Framer Motion", icon: Zap },
-                  { name: "Docker", icon: Box },
-                  { name: "Vercel", icon: Globe },
-                  { name: "Postman", icon: Monitor },
-                  { name: "DBeaver", icon: Database },
-                  { name: "Java", icon: FileCode },
-                  { name: "Cursor", icon: Terminal },
-                ].map((item, index) => (
+                  "TypeScript",
+                  "FastAPI",
+                  "Spring Boot",
+                  "Python",
+                  "PostgreSQL",
+                  "Tailwind CSS",
+                  "Framer Motion",
+                  "Docker",
+                  "Vercel",
+                  "Postman",
+                  "DBeaver",
+                  "Java",
+                  "Cursor",
+                ].map((name, index) => (
                   <div
                     key={`duplicate-${index}`}
                     className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
                   >
-                    <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
-                    {item.name}
+                    <TechIcon name={name} />
+                    {name}
                   </div>
                 ))}
               </div>
@@ -489,9 +536,20 @@ export default function PersonalWebsite() {
                   { name: "Refactor later", icon: Repeat },
                   { name: "Prototype everything", icon: Beaker },
                   { name: "Pixels matter", icon: Dot },
-                  { name: "No dead ends", icon: ArrowRight },
+                  {
+                    name: "Founder at Stealth",
+                    icon: () => (
+                      <Image
+                        src="/stealth.jpeg"
+                        alt="Founder at Stealth"
+                        width={16}
+                        height={16}
+                        className="rounded-full"
+                      />
+                    ),
+                  },
                   { name: "Professional matcha drinker", icon: Coffee },
-                  { name: "Not a frontend dev", icon: Terminal },
+                  { name: "Backend > Frontend", icon: Terminal },
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -514,9 +572,20 @@ export default function PersonalWebsite() {
                   { name: "Refactor later", icon: Repeat },
                   { name: "Prototype everything", icon: Beaker },
                   { name: "Pixels matter", icon: Dot },
-                  { name: "No dead ends", icon: ArrowRight },
+                  {
+                    name: "Founder at Stealth",
+                    icon: () => (
+                      <Image
+                        src="/stealth.jpeg"
+                        alt="Founder at Stealth"
+                        width={16}
+                        height={16}
+                        className="rounded-full"
+                      />
+                    ),
+                  },
                   { name: "Professional matcha drinker", icon: Coffee },
-                  { name: "Not a frontend dev", icon: Terminal },
+                  { name: "Backend > Frontend", icon: Terminal },
                 ].map((item, index) => (
                   <div
                     key={`duplicate-${index}`}
