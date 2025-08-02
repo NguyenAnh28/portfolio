@@ -265,7 +265,7 @@ export default function PersonalWebsite() {
             <span className="transition-transform duration-300 group-hover:-translate-x-0.5">
               Get Template
             </span>
-            <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+            <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0.5" />
           </Link>
         </div>
       </nav>
@@ -364,97 +364,42 @@ export default function PersonalWebsite() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Featured Projects
+            <h2 className="text-4xl lg:text-5xl font-medium text-white mb-4">
+              Featured Works
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              A collection of projects that showcase my expertise in modern web
-              development
+            <p className="text-xl text-silver-300 max-w-2xl mx-auto">
+              What I've been working on or planning to work on next.
             </p>
           </motion.div>
 
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {[
-              {
-                title: "SaaS Dashboard",
-                description:
-                  "A comprehensive analytics dashboard built with Next.js, featuring real-time data visualization and user management.",
-                tech: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
-                image: "/placeholder.svg",
-              },
-              {
-                title: "E-commerce Platform",
-                description:
-                  "Full-stack e-commerce solution with payment integration, inventory management, and admin panel.",
-                tech: ["React", "Node.js", "MongoDB", "Stripe"],
-                image: "/placeholder.svg",
-              },
-              {
-                title: "AI Chat Application",
-                description:
-                  "Real-time chat application powered by AI, featuring smart responses and conversation management.",
-                tech: ["React", "Socket.io", "OpenAI", "Redis"],
-                image: "/placeholder.svg",
-              },
-            ].map((project, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="bg-gray-900 border-gray-800 hover:border-gray-700 transition-all duration-300 group">
-                  <CardContent className="p-0">
-                    <div className="relative h-48 overflow-hidden rounded-t-lg">
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-400 mb-4 leading-relaxed">
-                        {project.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tech.map((tech) => (
-                          <Badge
-                            key={tech}
-                            variant="secondary"
-                            className="bg-gray-800 text-gray-300 border-gray-700"
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="text-gray-400 hover:text-white p-0"
-                        >
-                          View Project
-                          <ExternalLink className="ml-2 h-3 w-3" />
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="text-gray-400 hover:text-white p-0"
-                        >
-                          <Github className="h-4 w-4" />
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="flex justify-center">
+            <div className="w-[1200px] h-[350px] overflow-hidden">
+              <Image
+                src="/leetguard.png"
+                alt="LeetGuard"
+                width={800}
+                height={300}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          <div className="flex justify-start max-w-6xl mx-auto mt-4">
+            <div
+              className="text-white"
+              style={{ fontFamily: "Space Grotesk, sans-serif" }}
+            >
+              <div className="flex items-center space-x-1 group">
+                <Link
+                  href="#"
+                  className="text-2xl font-medium hover:text-white transition-colors duration-300"
+                >
+                  LeetGuard
+                </Link>
+                <ArrowRight className="h-3 w-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+              </div>
+              <p className="text-lg font-light">EXTENSION</p>
+            </div>
+          </div>
         </div>
       </section>
 
