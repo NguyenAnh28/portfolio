@@ -55,7 +55,7 @@ const TechIcon = ({ name }: { name: string }) => {
     Postman: "/postman.svg",
     DBeaver: "/dbeaver.svg",
     Java: "/java.svg",
-    Cursor: "/cursor.jpeg",
+    Cursor: "/cursor.png",
   };
 
   const iconPath = iconMap[name];
@@ -244,7 +244,7 @@ export default function PersonalWebsite() {
               Works
             </Link>
             <Link
-              href="#about"
+              href="/about"
               className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             >
               About
@@ -372,7 +372,13 @@ export default function PersonalWebsite() {
             </p>
           </motion.div>
 
-          <div className="flex justify-center">
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             <div className="w-[1200px] h-[350px] overflow-hidden">
               <Image
                 src="/leetguard.png"
@@ -382,8 +388,14 @@ export default function PersonalWebsite() {
                 className="object-cover w-full h-full"
               />
             </div>
-          </div>
-          <div className="flex justify-start max-w-6xl mx-auto mt-4">
+          </motion.div>
+          <motion.div
+            className="flex justify-start max-w-6xl mx-auto mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <div
               className="text-white"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -397,9 +409,9 @@ export default function PersonalWebsite() {
                 </Link>
                 <ArrowRight className="h-3 w-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
               </div>
-              <p className="text-lg font-light">EXTENSION</p>
+              <p className="text-lg font-light text-silver-300">EXTENSION</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -427,7 +439,7 @@ export default function PersonalWebsite() {
                 ].map((name, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-silver-300 font-normal flex items-center gap-2"
                   >
                     <TechIcon name={name} />
                     {name}
@@ -451,7 +463,7 @@ export default function PersonalWebsite() {
                 ].map((name, index) => (
                   <div
                     key={`duplicate-${index}`}
-                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-silver-300 font-normal flex items-center gap-2"
                   >
                     <TechIcon name={name} />
                     {name}
@@ -498,7 +510,7 @@ export default function PersonalWebsite() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-silver-300 font-normal flex items-center gap-2"
                   >
                     <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
                     {item.name}
@@ -534,7 +546,7 @@ export default function PersonalWebsite() {
                 ].map((item, index) => (
                   <div
                     key={`duplicate-${index}`}
-                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
+                    className="flex-shrink-0 mx-3 px-6 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-silver-300 font-normal flex items-center gap-2"
                   >
                     <item.icon className="h-4 w-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
                     {item.name}
@@ -560,10 +572,10 @@ export default function PersonalWebsite() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl lg:text-5xl font-medium text-white mb-6">
                 The Operator Behind the Screen
               </h2>
-              <div className="space-y-4 text-gray-400 leading-relaxed">
+              <div className="space-y-4 text-silver-300 leading-relaxed">
                 <p>
                   I'm a passionate full-stack developer with 5+ years of
                   experience building scalable web applications. I specialize in
@@ -585,45 +597,31 @@ export default function PersonalWebsite() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-8">
-                Tech Stack
-              </h3>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-3 gap-4">
                 {[
-                  {
-                    icon: Code,
-                    label: "Frontend",
-                    skills: "React, Next.js, TypeScript",
-                  },
-                  {
-                    icon: Zap,
-                    label: "Backend",
-                    skills: "Node.js, Python, PostgreSQL",
-                  },
-                  {
-                    icon: Palette,
-                    label: "Design",
-                    skills: "Figma, Tailwind CSS, Framer Motion",
-                  },
-                  {
-                    icon: Github,
-                    label: "Tools",
-                    skills: "Git, Docker, AWS, Vercel",
-                  },
-                ].map((category, index) => (
+                  "TypeScript",
+                  "FastAPI",
+                  "Spring Boot",
+                  "Python",
+                  "PostgreSQL",
+                  "Tailwind CSS",
+                  "Framer Motion",
+                  "Vercel",
+                  "Postman",
+                  "DBeaver",
+                  "Java",
+                  "Cursor",
+                ].map((name, index) => (
                   <motion.div
                     key={index}
-                    className="p-4 rounded-lg bg-gray-900 border border-gray-800"
+                    className="px-4 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
                   >
-                    <category.icon className="h-6 w-6 text-white mb-2" />
-                    <h4 className="font-semibold text-white mb-1">
-                      {category.label}
-                    </h4>
-                    <p className="text-sm text-gray-400">{category.skills}</p>
+                    <TechIcon name={name} />
+                    {name}
                   </motion.div>
                 ))}
               </div>
