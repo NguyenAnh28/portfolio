@@ -176,7 +176,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            <source src="/background1.mp4" type="video/mp4" />
+            <source src="/looped5.mp4" type="video/mp4" />
           </motion.video>
           {/* Overlay to ensure text readability */}
           <div className="absolute inset-0 bg-black/50"></div>
