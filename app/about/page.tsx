@@ -179,7 +179,7 @@ export default function AboutPage() {
             <source src="/looped5.mp4" type="video/mp4" />
           </motion.video>
           {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/70"></div>
           {/* Smooth black blur blend at bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
           {/* Smooth black blur blend at top */}
