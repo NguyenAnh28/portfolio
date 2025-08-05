@@ -201,10 +201,10 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <p>
-                I'm a software engineer who thrives on building fast, modern
-                startups and applications. My strengths are in FastAPI for
-                scalable backend systems and I care deeply about having a
-                beautiful interface and clean UI/UX. Quality over idea.
+                I'm a student who loves building fast, modern startups and
+                applications. I'm most comfortable with FastAPI for
+                backend and I care deeply about having a pretty interface and
+                clean UI/UX. Maybe that's why I take so long to ship my ideas.
               </p>
             </motion.div>
           </div>

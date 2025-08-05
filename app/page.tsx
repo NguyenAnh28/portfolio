@@ -340,14 +340,28 @@ export default function PersonalWebsite() {
               <Button
                 size="lg"
                 className="bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)] text-white hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-shadow duration-300 hover:bg-transparent"
+                asChild
               >
-                View My Work
+                <a
+                  href="https://github.com/try-leetguard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View My Work
+                </a>
               </Button>
               <Button
                 size="lg"
                 className="bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)] text-white hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-shadow duration-300 hover:bg-transparent"
+                asChild
               >
-                Get In Touch
+                <a
+                  href="https://www.linkedin.com/in/nguyenanhtrinh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get In Touch
+                </a>
               </Button>
             </motion.div>
           </motion.div>
@@ -575,7 +589,8 @@ export default function PersonalWebsite() {
               Every line of code tells a story. Every project is a journey.
               Here's where I share mine. I believe that quality and presentation
               is ever more important than the idea itself. Idea isn't the thing
-              that matters, execution is, and that's what I'm putting my focus on.
+              that matters, execution is, and that's what I'm putting my focus
+              on.
             </p>
           </motion.div>
         </div>
