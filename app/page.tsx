@@ -382,7 +382,7 @@ export default function PersonalWebsite() {
               Featured Works
             </h2>
             <p className="text-xl text-silver-300 max-w-2xl mx-auto">
-              What I've been working on or planning to work on next.
+              What I&apos;ve been working on or planning to work on next.
             </p>
           </motion.div>
 
@@ -587,10 +587,10 @@ export default function PersonalWebsite() {
           >
             <p className="text-xl text-white leading-relaxed">
               Every line of code tells a story. Every project is a journey.
-              Here's where I share mine. I believe that quality and presentation
-              is ever more important than the idea itself. Idea isn't the thing
-              that matters, execution is, and that's what I'm putting my focus
-              on.
+              Here&apos;s where I share mine. I believe that quality and
+              presentation is ever more important than the idea itself. Idea
+              isn&apos;t the thing that matters, execution is, and that&apos;s
+              what I&apos;m putting my focus on.
             </p>
           </motion.div>
         </div>
@@ -645,10 +645,10 @@ export default function PersonalWebsite() {
               </div>
             </motion.div>
             <h2 className="text-4xl lg:text-5xl font-medium text-white mb-6">
-              Let's Build Something Amazing
+              Let&apos;s Build Something Amazing
             </h2>
             <p className="text-xl text-silver-300 mb-8 max-w-2xl mx-auto">
-              I'm always down to listen.
+              I&apos;m always down to listen.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
