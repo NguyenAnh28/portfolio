@@ -562,71 +562,22 @@ export default function PersonalWebsite() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl lg:text-5xl font-medium text-white mb-6">
-                The Operator Behind the Screen
-              </h2>
-              <div className="space-y-4 text-silver-300 leading-relaxed">
-                <p>
-                  I'm a passionate full-stack developer with 5+ years of
-                  experience building scalable web applications. I specialize in
-                  React, Next.js, and modern JavaScript frameworks, with a keen
-                  eye for design and user experience.
-                </p>
-                <p>
-                  When I'm not coding, you'll find me exploring new
-                  technologies, contributing to open-source projects, or sharing
-                  knowledge with the developer community through blog posts and
-                  talks.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="grid grid-cols-3 gap-4">
-                {[
-                  "TypeScript",
-                  "FastAPI",
-                  "Spring Boot",
-                  "Python",
-                  "PostgreSQL",
-                  "Tailwind CSS",
-                  "Framer Motion",
-                  "Vercel",
-                  "Postman",
-                  "DBeaver",
-                  "Java",
-                  "Cursor",
-                ].map((name, index) => (
-                  <motion.div
-                    key={index}
-                    className="px-4 py-3 bg-[rgba(24,24,27,0.5)] rounded-full text-zinc-400 font-normal flex items-center gap-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                  >
-                    <TechIcon name={name} />
-                    {name}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+      {/* Filler Section */}
+      <section className="py-32 px-6 bg-black">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-xl text-white leading-relaxed">
+              Every line of code tells a story. Every project is a journey.
+              Here's where I share mine. I believe that quality and presentation
+              is ever more important than the idea itself. Idea isn't the thing
+              that matters, execution is, and that's what I'm putting my focus on.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -682,7 +633,7 @@ export default function PersonalWebsite() {
               Let's Build Something Amazing
             </h2>
             <p className="text-xl text-silver-300 mb-8 max-w-2xl mx-auto">
-              I'm always ready to work with forward-thinking teams.
+              I'm always down to listen.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -743,7 +694,7 @@ export default function PersonalWebsite() {
       <footer className="py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
           <p className="text-white text-sm">Built in Austin, TX</p>
-          <p className="text-white text-sm">All rights reserved, © 2025</p>
+          <p className="text-white text-sm">Anh (Ryan) Trinh © 2025</p>
         </div>
       </footer>
     </div>

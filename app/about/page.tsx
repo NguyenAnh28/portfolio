@@ -202,9 +202,9 @@ export default function AboutPage() {
             >
               <p>
                 I'm a software engineer who thrives on building fast, modern
-                startups and applications that actually get used. My strength
-                are in FastAPI for scalable backend systems and I care deeply
-                about having a beautiful interface and clean UI/UX.
+                startups and applications. My strengths are in FastAPI for
+                scalable backend systems and I care deeply about having a
+                beautiful interface and clean UI/UX. Quality over idea.
               </p>
             </motion.div>
           </div>
@@ -233,7 +233,7 @@ export default function AboutPage() {
               ].map((name, index) => (
                 <motion.div
                   key={index}
-                  className="inline-flex items-center justify-start gap-2 px-6 py-3 rounded-full bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)] h-12 w-40"
+                  className="inline-flex items-center justify-start gap-2 px-6 py-3 rounded-lg bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)] h-12 w-40"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
