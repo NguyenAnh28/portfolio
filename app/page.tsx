@@ -101,7 +101,7 @@ const staggerContainer = {
   },
 };
 
-export function WordsPullUp({
+function WordsPullUp({
   text,
   className = "",
   lineIndex = 0,
@@ -149,7 +149,7 @@ export function WordsPullUp({
   );
 }
 
-export function SubheaderWordsPullUp({
+function SubheaderWordsPullUp({
   text,
   className = "",
   lineIndex = 0,
