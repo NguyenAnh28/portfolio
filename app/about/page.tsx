@@ -63,7 +63,7 @@ const TechIcon = ({ name }: { name: string }) => {
   return <Image src={iconPath} alt={name} width={16} height={16} />;
 };
 
-export function WordsPullUp({
+function WordsPullUp({
   text,
   className = "",
   lineIndex = 0,
@@ -111,7 +111,7 @@ export function WordsPullUp({
   );
 }
 
-export function SubheaderWordsPullUp({
+function SubheaderWordsPullUp({
   text,
   className = "",
   lineIndex = 0,
@@ -202,9 +202,9 @@ export default function AboutPage() {
             >
               <p>
                 I'm a student who loves building fast, modern startups and
-                applications. I'm most comfortable with FastAPI for
-                backend and I care deeply about having a pretty interface and
-                clean UI/UX. Maybe that's why I take so long to ship my ideas.
+                applications. I'm most comfortable with FastAPI for backend and
+                I care deeply about having a pretty interface and clean UI/UX.
+                Maybe that's why I take so long to ship my ideas.
               </p>
             </motion.div>
           </div>
