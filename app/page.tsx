@@ -371,28 +371,16 @@ export default function PersonalWebsite() {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-medium text-white mb-4">
               Featured Works
             </h2>
             <p className="text-xl text-silver-300 max-w-2xl mx-auto">
               What I&apos;ve been working on or planning to work on next.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="flex justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+          <div className="flex justify-center">
             <div className="w-[1200px] h-[350px] overflow-hidden">
               <Image
                 src="/leetguard.png"
@@ -402,14 +390,8 @@ export default function PersonalWebsite() {
                 className="object-cover w-full h-full"
               />
             </div>
-          </motion.div>
-          <motion.div
-            className="flex justify-start max-w-6xl mx-auto mt-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          </div>
+          <div className="flex justify-start max-w-6xl mx-auto mt-4">
             <div
               className="text-white"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -425,7 +407,7 @@ export default function PersonalWebsite() {
               </div>
               <p className="text-lg font-light text-silver-300">EXTENSION</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -579,20 +561,13 @@ export default function PersonalWebsite() {
       {/* Filler Section */}
       <section className="py-32 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-xl text-white leading-relaxed">
-              Every line of code tells a story. Every project is a journey.
-              Here&apos;s where I share mine. I believe that quality and
-              presentation is ever more important than the idea itself. Idea
-              isn&apos;t the thing that matters, execution is, and that&apos;s
-              what I&apos;m putting my focus on.
-            </p>
-          </motion.div>
+          <p className="text-xl text-white leading-relaxed">
+            Every line of code tells a story. Every project is a journey.
+            Here&apos;s where I share mine. I believe that quality and
+            presentation is ever more important than the idea itself. Idea
+            isn&apos;t the thing that matters, execution is, and that&apos;s
+            what I&apos;m putting my focus on.
+          </p>
         </div>
       </section>
 
@@ -624,26 +599,15 @@ export default function PersonalWebsite() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.div
-              className="flex justify-center mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
+          <div>
+            <div className="flex justify-center mb-8">
               <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                 <div className="w-2 h-2 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)] animate-[brightPulse_2s_ease-in-out_infinite]"></div>
                 <span className="text-white font-medium text-sm">
                   Available for work
                 </span>
               </div>
-            </motion.div>
+            </div>
             <h2 className="text-4xl lg:text-5xl font-medium text-white mb-6">
               Let&apos;s Build Something Amazing
             </h2>
@@ -701,7 +665,7 @@ export default function PersonalWebsite() {
                 <span className="sr-only">X</span>
               </motion.a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -709,7 +673,7 @@ export default function PersonalWebsite() {
       <footer className="py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
           <p className="text-white text-sm">Built in Austin, TX</p>
-          <p className="text-white text-sm">Anh (Ryan) Trinh © 2025</p>
+          <p className="text-white text-sm">Anh (Ryan) Trinh, 2025</p>
         </div>
       </footer>
     </div>
