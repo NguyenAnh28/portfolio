@@ -272,8 +272,8 @@ export default function PersonalWebsite() {
 
       {/* Hero Section */}
       <section
-        className="relative pt-48 pb-20 px-6 overflow-hidden"
-        style={{ minHeight: "120vh" }}
+        className="relative pt-48 pb-12 px-6 overflow-hidden"
+        style={{ minHeight: "100vh" }}
       >
         {/* Video Background */}
         <div
@@ -369,7 +369,7 @@ export default function PersonalWebsite() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-black">
+      <section id="projects" className="pt-12 pb-20 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-medium text-white mb-4">
@@ -468,9 +468,9 @@ export default function PersonalWebsite() {
               </div>
             </div>
             {/* Blur overlay on left end */}
-            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-950 to-transparent pointer-events-none"></div>
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
             {/* Blur overlay on right end */}
-            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-950 to-transparent pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
           </div>
 
           {/* Bottom Carousel - Left to Right */}
@@ -551,9 +551,9 @@ export default function PersonalWebsite() {
               </div>
             </div>
             {/* Blur overlay on left end */}
-            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-950 to-transparent pointer-events-none"></div>
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
             {/* Blur overlay on right end */}
-            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-950 to-transparent pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
           </div>
         </div>
       </section>
