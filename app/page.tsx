@@ -234,24 +234,26 @@ export default function PersonalWebsite() {
             : "-translate-y-full pointer-events-none"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-2 py-5 flex justify-between items-center">
-          <div className="text-gray-200 font-medium text-lg">RYANTRINH</div>
-          <div className="flex items-center space-x-8 ml-6">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-5 flex justify-between items-center">
+          <div className="text-gray-200 font-medium text-sm sm:text-lg">
+            RYANTRINH
+          </div>
+          <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 ml-2 sm:ml-4 md:ml-6">
             <Link
               href="#projects"
-              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-xs sm:text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             >
               Works
             </Link>
             <Link
               href="/about"
-              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-xs sm:text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             >
               About
             </Link>
             <Link
               href="#contact"
-              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+              className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-xs sm:text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             >
               Contact
             </Link>
@@ -260,10 +262,13 @@ export default function PersonalWebsite() {
             href="https://github.com/NguyenAnh28/portfolio"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group flex items-center space-x-1"
+            className="text-gray-200 hover:text-white transition-all duration-300 font-normal text-xs sm:text-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group flex items-center space-x-1"
           >
-            <span className="transition-transform duration-300 group-hover:-translate-x-0.5">
+            <span className="transition-transform duration-300 group-hover:-translate-x-0.5 hidden sm:inline">
               Get Template
+            </span>
+            <span className="transition-transform duration-300 group-hover:-translate-x-0.5 sm:hidden">
+              Template
             </span>
             <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0.5" />
           </Link>

@@ -216,7 +216,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="grid grid-cols-4 gap-4 justify-items-start">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-4 justify-items-center max-w-6xl mx-auto px-4">
               {[
                 "TypeScript",
                 "FastAPI",
@@ -233,14 +233,14 @@ export default function AboutPage() {
               ].map((name, index) => (
                 <motion.div
                   key={index}
-                  className="inline-flex items-center justify-start gap-2 px-6 py-3 rounded-lg bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)] h-12 w-40"
+                  className="inline-flex items-center justify-center gap-2 px-3 sm:px-4 md:px-6 py-3 rounded-lg bg-transparent border border-white shadow-[0_0_15px_rgba(255,255,255,0.3)] h-12 w-full max-w-36 sm:max-w-40"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <TechIcon name={name} />
-                  <span className="text-white font-medium text-sm whitespace-nowrap">
+                  <span className="text-white font-medium text-xs sm:text-sm whitespace-nowrap">
                     {name}
                   </span>
                 </motion.div>
